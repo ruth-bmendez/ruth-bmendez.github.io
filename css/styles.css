@@ -1,0 +1,276 @@
+:root {
+    --brand: #00669F;
+    --brand-dark: #001D2D;
+
+    --alpha: #2C0187;
+
+    --primary: #1CD1B0;
+    --secondary: #888;
+    --secondary-light: #F3F3F3;
+    --profile-size: 120px;
+    --border-radius-detail: 3rem;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.topbar {
+    background: var(--primary);
+    height: 24px;
+    line-height: 23px;
+    margin: 0;
+    padding: 0 1rem;
+}
+
+.logobar {
+    height: 80px;
+    background: #00669F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    height: 2.5rem;
+    background-color: var(--brand-dark);
+}
+
+.nav ul {
+    height: 100%;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav li {
+    margin: 0 .5rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.logo {
+    margin-left: 1rem;
+}
+
+.store-name {
+    font-size: 30px;
+    color: #fff;
+    margin: 0 1rem;
+}
+
+.main {
+    height: 100;
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    width: 620px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.email-input:focus, .password-input:focus, .select:focus, .text-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    transition: .3s ease border;
+}
+
+.email-input, .password-input, .text-input, .select, .button, .textarea {
+    border: solid 2px black;
+    font-size: 20px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.email-input, .password-input, .text-input, .select, .button {
+    height: 60px;
+}
+
+.button {
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.primary {
+    background-color: var(--primary);
+}
+
+.secondary {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.text {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.link {
+    color: #00669F;
+    text-decoration: none;
+}
+
+/* :::::::::::::::::::: CARD ::::::::::::::::::::: */
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--secondary-light);
+    box-shadow: 0 4px 4px 0 hsla(0, 0%, 0%, 0.25);
+    width: 250px;
+    font-size: 1rem;
+    border-radius: 1.2rem 1.2rem 0 0;
+    overflow: hidden;
+}
+
+.card-header {
+    position: relative;
+    margin-bottom: calc(var(--profile-size) /2);
+}
+
+.card .favorite {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.card .profile, .card-detail .profile {
+    width: var(--profile-size);
+    height: var(--profile-size);
+    position: absolute;
+    bottom: calc(var(--profile-size)/-2);
+    left: calc(50% - (var(--profile-size) / 2));
+    border-radius: 50%;
+}
+
+.card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body h1 {
+    margin: 0;
+    align-self: center;
+}
+
+.card .button {
+    height: 3rem;
+    width: 9rem;
+    background-color: var(--brand);
+    border: none;
+    margin: auto;
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1rem;
+    border-radius: 0;
+    font-size: 1rem;
+}
+
+.add {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--brand);
+    color: white;
+    font-size: 4rem;
+}
+
+/* :::::::::::::::::::: CARD-DETAIL ::::::::::::::::::::: */
+
+.card-detail-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 11.5rem);
+    background-image: url('/img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-detail {
+    position: relative;
+    background-color: white;
+    width: 546px;
+    border-radius: var(--border-radius-detail);
+    padding-top: calc(var(--profile-size) /2);
+
+}
+
+.card-detail .profile {
+    --profile-size: 160px;
+    top: calc(var(--profile-size)/-2);
+    
+}
+.card-detail h1 {
+    margin: 1rem 0 0;
+}
+
+.card-detail .favorite {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    cursor: pointer;
+}
+
+.card-detail .guns{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card-detail .big-bottom-button{
+    display: block;
+    width: 100%;
+    height: 5rem;
+    margin-top: 2rem;
+    line-height: 5rem;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border: none;
+    background-color: var(--alpha);
+    border-radius: 0 0 var(--border-radius-detail) var(--border-radius-detail);
+}
+
+.footer {
+    background-color: var(--brand);
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
